@@ -29,10 +29,6 @@ public a(){
         return super.equals(obj);
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 
 
 
