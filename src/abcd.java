@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class abcd {
     private String a;
     private String b;
@@ -26,5 +28,22 @@ public class abcd {
     public void setV(int v) {
         this.v = v;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        abcd abcd = (abcd) o;
+        return v == abcd.v && Objects.equals(a, abcd.a) && Objects.equals(b, abcd.b);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(a, b, v);
+    }
+
+
+
+
 
 }
