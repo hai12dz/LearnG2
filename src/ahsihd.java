@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class ahsihd {
     private String a;
     public int abc;
@@ -21,5 +23,18 @@ public class ahsihd {
 
     public void setAbc(int abc) {
         this.abc = abc;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ahsihd ahsihd = (ahsihd) o;
+        return abc == ahsihd.abc && Objects.equals(a, ahsihd.a);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(a, abc);
     }
 }
